@@ -1,0 +1,19 @@
+table 
+{
+	border-spacing: 4px;
+	width: 100%;
+	border-collapse: collapse; 
+}
+h1
+{
+	color: blue
+
+}
+td
+{
+	color: blue
+}
+th  
+{
+    color: black 
+}

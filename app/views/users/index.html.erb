@@ -1,0 +1,19 @@
+<h1 align="center">Userlist</h1>
+<p>
+	<table border="2" width="100%" cellpadding="6" bgcolor = "white" bordercolor = "red">
+<tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Surname</th>
+    <th>Email</th>
+</tr>
+<% @a.each do |user|  %>
+ <tr>
+    <td><%= user[:id]%></td>
+    <td><%= user[:name]%></td>
+    <td><%= user[:surname]%></td>
+    <td><%= user[:email]%></td>
+</tr>
+<% end %>
+	</table>
+</p>
