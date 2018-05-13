@@ -4,14 +4,14 @@
 <tr>
     <th>Id</th>
     <th>Name</th>
-    <th>Surname</th>
+    <th>Lastname</th>
     <th>Email</th>
 </tr>
 <% @a.each do |user|  %>
  <tr>
     <td><%= user[:id]%></td>
     <td><%= user[:name]%></td>
-    <td><%= user[:surname]%></td>
+    <td><%= user[:lastname]%></td>
     <td><%= user[:email]%></td>
 </tr>
 <% end %>
