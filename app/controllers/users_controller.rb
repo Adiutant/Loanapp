@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def index
-  @a = User.all
+  @a = User.paginate(per_page: 2, page: params[:page])
     #@a[0] = {id: 12134241, name: "Alex", surname: "Ivanov", email: "1@mail.ru"}
     #@a[1] = {id: 121342141, name: "Roman", surname: "Alexeev", email: "12mail.ru"}
     #@a[2] = {id: 121342241, name: "Vasya", surname: "Mirnov", email: "3@mail.ru"}
@@ -12,7 +12,7 @@ class UsersController < ApplicationController
     #User.destroy(24)
   end
   def show 
-    #@f = User.find(2).email
+    @f = User.find(params[:id])
   end
   def new
     @user = User.new

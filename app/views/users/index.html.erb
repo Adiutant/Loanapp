@@ -9,7 +9,7 @@
 </tr>
 <% @a.each do |user|  %>
  <tr>
-    <td><%= user[:id]%></td>
+    <td><%= link_to user[:id], user_path(user[:id])%></td>
     <td><%= user[:name]%></td>
     <td><%= user[:lastname]%></td>
     <td><%= user[:email]%></td>
@@ -17,5 +17,8 @@
 <% end %>
 	</table>
 </p>
+
  <h2 align="center"</h2>
     <p> <%= link_to 'New User', "/users/new" %></p>
+    <%=will_paginate @a%>
+
