@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def index
-  @a = User.order(params[:sort]).paginate(per_page: 2, page: params[:page])
+  @a = User.order(params[:sort]).paginate(per_page: 6, page: params[:page])
   if params[:sort].nil?
     @sort = "created_at"
   else

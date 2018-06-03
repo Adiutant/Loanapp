@@ -9,7 +9,7 @@
 </tr>
 <% @l.each do |loan|  %>
  <tr>
-    <td><%= link_to loan[:giver], loan_path(loan[:giver])%></td>
+    <td><%= link_to loan.user.name, loan_path(loan[:id])%></td>
     <td><%= loan[:sum]%></td>
     <td><%= loan[:term]%></td>
     <td><%= loan[:interest]%></td>
@@ -17,3 +17,6 @@
 <% end %>
 	</table>
 </p>
+ <h2 align="center"</h2>
+    <p> <%= link_to 'New Loan', "/loans/new" %></p>
+    <%=will_paginate @l%>

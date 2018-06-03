@@ -1,12 +1,12 @@
-<h2 align="center"
+<h2 align="center">
 <%= form_for @loan do |f| %>
-<%= f.text_field :giver%>
+<%=  f.collection_select :user_id, User.all.order("lastname"), :id, :lastname %>
 <%=  f.text_field :sum%>
 <%= f.text_field :term%>
 <%= f.text_field :interest%>
 <%= f.submit "Save"%>
 <%end%>
- </h2>
+ 
 <h1 align="center" 
 <p> <%= link_to "Back to table", "/loans"%> </p>
 </h1>
