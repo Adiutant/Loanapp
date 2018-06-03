@@ -13,6 +13,7 @@ class LoansController < ApplicationController
       redirect_to loan_path(@loan)
     else
       render "new"
+
     end
-end
   end
+end
