@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  giver: MyString
+  sum: 1.5
+  term: 1
+  interest: 1.5
+
+two:
+  giver: MyString
+  sum: 1.5
+  term: 1
+  interest: 1.5

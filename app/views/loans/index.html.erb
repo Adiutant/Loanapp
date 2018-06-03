@@ -1,0 +1,19 @@
+<h1 align="center">LoanList</h1>
+<p>
+	<table border="2" width="100%" cellpadding="6" bgcolor = "white" bordercolor = "red">
+<tr>
+    <th>Giver</th>
+    <th>Summ</th>
+    <th>Term</th>
+    <th>Interest</th>
+</tr>
+<% @l.each do |loan|  %>
+ <tr>
+    <td><%= link_to loan[:giver], loan_path(loan[:giver])%></td>
+    <td><%= loan[:sum]%></td>
+    <td><%= loan[:term]%></td>
+    <td><%= loan[:interest]%></td>
+</tr>
+<% end %>
+	</table>
+</p>

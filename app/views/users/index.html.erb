@@ -3,8 +3,8 @@
 	<table border="2" width="100%" cellpadding="6" bgcolor = "white" bordercolor = "red">
 <tr>
     <th>Id</th>
-    <th>Name</th>
-    <th>Lastname</th>
+    <th>Name <%=link_to "↓", users_path(sort:"lastname")%>  <%= link_to "↑", users_path(sort:"lastname DESC") %></th>
+    <th>Lastname <%=link_to "↓", users_path(sort:"lastname")%>  <%= link_to "↑", users_path(sort:"lastname DESC") %></th>
     <th>Email</th>
 </tr>
 <% @a.each do |user|  %>
@@ -17,8 +17,6 @@
 <% end %>
 	</table>
 </p>
-
  <h2 align="center"</h2>
     <p> <%= link_to 'New User', "/users/new" %></p>
     <%=will_paginate @a%>
-
