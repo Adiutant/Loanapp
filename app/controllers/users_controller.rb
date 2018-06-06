@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   else
     @sort = params[:sort]
   end
+
     #@a[0] = {id: 12134241, name: "Alex", surname: "Ivanov", email: "1@mail.ru"}
     #@a[1] = {id: 121342141, name: "Roman", surname: "Alexeev", email: "12mail.ru"}
     #@a[2] = {id: 121342241, name: "Vasya", surname: "Mirnov", email: "3@mail.ru"}
@@ -17,18 +18,22 @@ class UsersController < ApplicationController
     #User.destroy(24)
     #User.order("name").paginate(per_page: 2, page: params[:name])
   end
+
   def show 
     @f = User.find(params[:id])
   end
+
   def new
     @user = User.new
   end
+
   def create
-    @user = User.create(name: params[:user][:name], lastname: params[:user][:lastname], email: params[:user][:email],)
+    @user = User.create(name: params[:user][:name], lastname: params[:user][:lastname], email: params[:user][:email])
     if @user.errors.empty?
       redirect_to user_path(@user)
     else
       render "new"
     end
   end
+
 end
