@@ -1,4 +1,4 @@
-
+<%if @user.errors.any?%>
 	<div align = "center" class="alert alert-warning alert-dismissible" role="alert">
 		<a href ="#" class ="close" data-dismiss="alert"> &times</a>
 		<ul><%= @user.errors.full_messages.each do|f|%>
@@ -7,6 +7,7 @@
 </li>
 <%end%>
 		 </ul></div>
+		 <%end%>
 <p align="center"><%= form_for @user do |f| %></p>
 <p align="center"><%= f.text_field :name%></p>
 <p align="center"><%=  f.text_field :lastname%></p>
