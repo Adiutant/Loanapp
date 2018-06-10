@@ -1,12 +1,19 @@
-<h2 align="center">
-<%= form_for @loan do |f| %>
-<%=  f.collection_select :user_id, User.all.order("lastname"), :id, :lastname %>
-<%=  f.text_field :sum%>
-<%= f.text_field :term%>
-<%= f.text_field :interest%>
-<%= f.submit "Save"%>
+<div align = "center" class="alert alert-warning alert-dismissible" role="alert">
+	<a href ="#" class ="close" data-dismiss="alert"> &times</a>
+		<ul><%= @loan.errors.full_messages.each do|f|%>
+<li>
+	<%= p f %>
+</li>
+<%end%>
+		 </ul></div>
+<p align="center"><%= form_for @loan do |f| %></p>
+<p align="center"><%=  f.collection_select :user_id, User.all.order("lastname"), :id, :lastname %></p>
+<p align="center"><%=  f.text_field :sum%></p>
+<p align="center"><%= f.text_field :term%></p>
+<p align="center"><%= f.text_field :interest%></p>
+<p align="center"><%= f.submit "Save"%></p>
 <%end%>
  
-<h1 align="center" 
+<h1 align="center" >
 <p> <%= link_to "Back to table", "/loans"%> </p>
 </h1>
