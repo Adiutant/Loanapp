@@ -28,7 +28,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.create(name: params[:user][:name], lastname: params[:user][:lastname], email: params[:user][:email])
+    @user = User.create(name: params[:user][:name], lastname: params[:user][:lastname], email: params[:user][:email], password: params[:user][:password], password_confirmation: params[:user][:password_confirmation])
     if @user.errors.empty?
       redirect_to user_path(@user)
     else
