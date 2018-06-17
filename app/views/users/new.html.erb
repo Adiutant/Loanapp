@@ -1,7 +1,7 @@
 <%if @user.errors.any?%>
 	<div align = "center" class="alert alert-warning alert-dismissible" role="alert">
 		<a href ="#" class ="close" data-dismiss="alert"> &times</a>
-		<ul><%= @user.errors.full_messages.each do|f|%>
+		<ul><%= @user.errors.full_messages.each do |f|%>
 <li>
 	<%= p f %>
 </li>

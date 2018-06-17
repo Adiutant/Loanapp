@@ -5,4 +5,5 @@ class User < ApplicationRecord
   validates :name, :lastname, length: {minimum: 2, maximum: 50}
   has_many :loans
   has_secure_password
+  validates :password, length: {minimum: 2, maximum: 50}
 end
