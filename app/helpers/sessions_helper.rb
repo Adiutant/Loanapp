@@ -12,4 +12,6 @@ module SessionsHelper
     session.delete(:user_id)
     @user_id = nil
   end
+  def admin_check
+  end
 end

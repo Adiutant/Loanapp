@@ -6,13 +6,23 @@
     <th>Summ</th>
     <th>Term</th>
     <th>Interest</th>
+    <th>Begining</th>
+    <th>Notice</th>
+    <th>Creditor</th>
+    <th>Punishment</th>
+    <th>Email</th>
 </tr>
 <% @l.each do |loan|  %>
  <tr>
-    <td><%= link_to loan.user.name, loan_path(loan[:id])%></td>
+    <td><%= loan[:giver]%></td>
     <td><%= loan[:sum]%></td>
     <td><%= loan[:term]%></td>
-    <td><%= loan[:interest]%></td>
+     <td><%= loan[:interest]%></td>
+    <td><%= loan[:begining]%></td>
+    <td><%= loan[:notice]%></td>
+    <td><%= loan[:creditor]%></td>
+    <td><%= loan[:punishment]%></td>
+    <td><%= loan[:email]%></td>
 </tr>
 <% end %>
 	</table>

@@ -9,12 +9,12 @@
 		 </ul></div>
 		 <%end%>
 <p align="center"><%= form_for @loan do |f| %></p>
-<p align="center"><%=  f.collection_select :user_id, User.all.order("lastname"), :id, :lastname %></p>
-<p align="center"><%=  f.text_field :sum%></p>
-<p align="center"><%= f.text_field :term%></p>
-<p align="center"><%= f.text_field :interest%></p>
-<p align="center"><%= f.submit "Save"%></p>
+<p align="center">Введите свои персональные данные<%=  f.text_field :giver %></p>
+<p align="center">Введите данные заемщика(ФИО и паспортные данные)<%=  f.text_field :creditor%></p>
+<p align="center">Введите сумму займа<%=  f.text_field :sum%></p>
+<p align="center">Введите срок займа<%= f.text_field :term%></p>
+<p align="center">Введите процент займа<%= f.text_field :interest%></p>
+<p align="center">Укажите санкции в случае невозврата<%=  f.text_field :punishment %></p>
+<p align="center">Укажите дату составления расписки<%=  f.text_field :begining %></p>
+<p align="center"><%= f.submit "Составить расписку"%></p>
 <%end%>
-<h1 align="center" >
-<p> <%= link_to "Back to table", "/loans"%> </p>
-</h1>

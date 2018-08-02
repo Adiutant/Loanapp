@@ -15,7 +15,7 @@ class LoansController < ApplicationController
   
   end
   def create
-    @loan = Loan.create(user_id: params[:loan][:user_id], sum: params[:loan][:sum], term: params[:loan][:term], interest: params[:loan][:interest])
+    @loan = Loan.create(giver: params[:loan][:giver],notice: params[:loan][:notice],begining: params[:loan][:begining],email: params[:loan][:email], sum: params[:loan][:sum], term: params[:loan][:term], interest: params[:loan][:interest],creditor: params[:loan][:creditor])
     if @loan.errors.empty?
       redirect_to loan_path(@loan)
     else
