@@ -1,3 +1,4 @@
-<h1 align="center">Loan <%=@f.id%> info</h1>
-<p align="center">Name is <%= @f.user.name %>, Summ is <%= @f.sum %>, Term <%= @f.term %> Percent is <%= @f.interest %></p>
-<p align="center"><%= link_to "Back to table", "/loans"%> </p>
+<h1 align="center">Краткая информация о вашей расписке</h1>
+<p align="center">ФИО занимающего <%= @f.giver %>, Сумма займа <%= @f.sum %>, Срок <%= @f.term %>, Процент займа <%= @f.interest %></p>
+<p align="center">На указанную вами почту была отправлена расписка, составленая  на основе введенных вами данных.</p>
+<%if !current_user.nil?%><p align="center"><%= link_to "Back to table", "/loans"%> </p><%end%>

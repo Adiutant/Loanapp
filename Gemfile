@@ -64,7 +64,7 @@ gem 'will_paginate'
 gem 'bootstrap-sass', '~> 3.3.7'
 gem 'jquery-rails'
 gem 'bcrypt'
-
+gem 'pdf-writer', '~>1.1', '>=1.1.8'
 #group :production do 
 #  gem 'pg'
 #end

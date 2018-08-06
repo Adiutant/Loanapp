@@ -9,12 +9,17 @@
 		 </ul></div>
 		 <%end%>
 <p align="center"><%= form_for @loan do |f| %></p>
-<p align="center">Введите свои персональные данные<%=  f.text_field :giver %></p>
-<p align="center">Введите данные заемщика(ФИО и паспортные данные)<%=  f.text_field :creditor%></p>
-<p align="center">Введите сумму займа<%=  f.text_field :sum%></p>
-<p align="center">Введите срок займа<%= f.text_field :term%></p>
-<p align="center">Введите процент займа<%= f.text_field :interest%></p>
-<p align="center">Укажите санкции в случае невозврата<%=  f.text_field :punishment %></p>
-<p align="center">Укажите дату составления расписки<%=  f.text_field :begining %></p>
+<p align="center">Введите свои персональные данные: <%=  f.text_field :giver %></p>
+<p align="center">Введите свои паспортные данные: <%=  f.text_field :gpd %></p>
+<p align="center">Введите данные заемщика(ФИО): <%=  f.text_field :creditor%></p>
+<p align="center">Введите паспортные данные заемщика: <%=  f.text_field :cpd %></p>
+<p align="center">Введите сумму займа: <%=  f.text_field :sum%></p>
+<p align="center">Введите срок займа: <%= f.text_field :term%></p>
+<p align="center">Введите процент займа: <%= f.text_field :interest%></p>
+<p align="center">Укажите санкции в случае невозврата: <%=  f.text_field :punishment %></p>
+<p align="center">Укажите дату составления расписки: <%=  f.date_field :begining %></p>
+<p align="center">Введите свой email: <%=  f.text_field :email %></p>
+<p align="center">Нужна ли вам ежемесячная рассылка? <%=  f.check_box :notice %></p>
+
 <p align="center"><%= f.submit "Составить расписку"%></p>
 <%end%>

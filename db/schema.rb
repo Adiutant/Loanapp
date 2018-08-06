@@ -10,10 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_02_145843) do
+ActiveRecord::Schema.define(version: 2018_08_05_194544) do
 
 # Could not dump table "loans" because of following StandardError
-#   Unknown type 'bool' for column 'notice'
+#   Unknown type '' for column 'notice'
 
   create_table "users", force: :cascade do |t|
     t.string "name"
