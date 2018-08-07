@@ -3,28 +3,44 @@
 	<table class="table table-condenced" border="2" width="100%" cellpadding="6" bgcolor = "white" bordercolor = "red">
 <tr>
     <th>Giver</th>
-    <th>Giver Passport Data</th>
+    <th>Giver Date of Birth</th>
+    <th>Giver Registred Addres</th>
+    <th>Giver Passport Serial Number</th>
+    <th>Giver Passport Taken Time</th>
+    <th>Giver Passport Taken Place</th>
     <th>Summ</th>
     <th>Term</th>
     <th>Interest</th>
     <th>Begining</th>
     <th>Notice</th>
     <th>Creditor</th>
-    <th>Creditor Passport Data</th>
+    <th>Creditor Date of Birth</th>
+    <th>Creditor Registred Addres</th>
+    <th>Creditor Passport Serial Number</th>
+    <th>Creditor Passport Taken Time</th>
+    <th>Creditor Passport Taken Place</th>
     <th>Punishment</th>
     <th>Email</th>
 </tr>
 <% @l.each do |loan|  %>
  <tr>
     <td><%= loan[:giver]%></td>
-    <td><%= loan[:gpd]%></td>
+    <td><%= loan[:BirthODG]%></td>
+    <td><%= loan[:RegistredAtG]%></td>
+    <td><%= loan[:SerialG]%></td>
+    <td><%= loan[:PassTakenTimeG]%></td>
+    <td><%= loan[:PassTakenG]%></td>
     <td><%= loan[:sum]%></td>
     <td><%= loan[:term]%></td>
     <td><%= loan[:interest]%></td>
     <td><%= loan[:begining]%></td>
     <td><%= loan[:notice]%></td>
     <td><%= loan[:creditor]%></td>
-    <td><%= loan[:cpd]%></td>
+    <td><%= loan[:BirthODC]%></td>
+    <td><%= loan[:RegistredAtC]%></td>
+    <td><%= loan[:SerialC]%></td>
+    <td><%= loan[:PassTakenTimeC]%></td>
+    <td><%= loan[:PassTakenC]%></td>
     <td><%= loan[:punishment]%></td>
     <td><%= loan[:email]%></td>
 </tr>

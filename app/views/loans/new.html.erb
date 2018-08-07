@@ -9,12 +9,20 @@
 		 </ul></div>
 		 <%end%>
 <p align="center"><%= form_for @loan do |f| %></p>
-<p align="center">Введите свои персональные данные: <%=  f.text_field :giver %></p>
-<p align="center">Введите свои паспортные данные: <%=  f.text_field :gpd %></p>
+<p align="center">Введите свои ФИО: <%=  f.text_field :giver %></p>
+<p align="center">Введите дату рождения: <%=  f.date_field :BirthODG %></p>
+<p align="center">Введите свой адрес прописки: <%=  f.text_field :RegistredAtG %></p>
+<p align="center">Введите серию и номер вашего паспорта: <%=  f.text_field :SerialG %></p>
+<p align="center">Введите  когда был выдан ваш паспорт: <%=  f.date_field :PassTakenTimeG%></p>
+<p align="center">Введите  кем был выдан ваш паспорт: <%=  f.text_field :PassTakenG %></p>
 <p align="center">Введите данные заемщика(ФИО): <%=  f.text_field :creditor%></p>
-<p align="center">Введите паспортные данные заемщика: <%=  f.text_field :cpd %></p>
+<p align="center">Введите дату рождения заемщика: <%=  f.date_field :BirthODC%></p>
+<p align="center">Введите  адрес прописки заемщика: <%=  f.text_field :RegistredAtC%></p>
+<p align="center">Введите серию и номер паспорта заемщика: <%=  f.text_field :SerialC%></p>
+<p align="center">Введите  когда был выдан паспорт заемщика: <%=  f.date_field :PassTakenTimeC%></p>
+<p align="center">Введите  кем был выдан паспорт заемщика: <%=  f.text_field :PassTakenC%></p>
 <p align="center">Введите сумму займа: <%=  f.text_field :sum%></p>
-<p align="center">Введите срок займа: <%= f.text_field :term%></p>
+<p align="center">Введите срок займа: <%= f.date_field :term%></p>
 <p align="center">Введите процент займа: <%= f.text_field :interest%></p>
 <p align="center">Укажите санкции в случае невозврата: <%=  f.text_field :punishment %></p>
 <p align="center">Укажите дату составления расписки: <%=  f.date_field :begining %></p>
