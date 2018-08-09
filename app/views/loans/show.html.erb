@@ -4,4 +4,4 @@
 	<%=@f.begining%></p>
 
 <b align="center" >На указанную вами почту была отправлена расписка, составленая  на основе введенных вами данных.</b>
-<%if !current_user.nil?%><p align="center"><%= link_to "Back to table", "/loans"%> </p><%end%>
+<%unless current_user.nil?%><p align="center"><%= link_to "Back to table", loans_path%> </p><%end%>
