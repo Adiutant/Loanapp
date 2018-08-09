@@ -10,10 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_07_165849) do
+ActiveRecord::Schema.define(version: 2018_08_09_112213) do
 
-# Could not dump table "loans" because of following StandardError
-#   Unknown type '' for column 'notice'
+  create_table "loans", force: :cascade do |t|
+    t.float "sum"
+    t.string "term"
+    t.float "interest"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "creditor"
+    t.string "punishment"
+    t.string "giver"
+    t.string "begining"
+    t.string "email"
+    t.boolean "notice"
+    t.string "BirthODG"
+    t.string "BirthODC"
+    t.string "RegistredAtG"
+    t.string "RegistredAtC"
+    t.string "SerialG"
+    t.string "SerialC"
+    t.string "PassTakenG"
+    t.string "PassTakenC"
+    t.string "PassTakenTimeG"
+    t.string "PassTakenTimeC"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "name"
