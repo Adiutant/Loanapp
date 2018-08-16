@@ -1,0 +1,4 @@
+<h1 align="center" style="color: Black">Расписка в получении денежных средств</h1>
+<p align="center">Я, <%= @loan.creditor %>, род. <%=@loan.BirthODG%>, зарегестрированный(я) по адресу: <%=@loan.RegistredAtC%>, паспорт номер: <%=@loan.SerialC%> выдан <%=@loan.PassTakenTimeC%>, <%=@loan.PassTakenC%> получил(а) <%=@loan.begining%> от <%=@loan.giver%> зарегистрированного(ой) по адресу <%=@loan.RegistredAtG%>, паспорт номер: <%=@loan.SerialG%> выдан <%=@loan.PassTakenTimeG%>, <%=@loan.PassTakenG%> <%= @loan.sum %> рублей. Денежные средства получены мной в качестве займа. Деньги обязуюсь вернуть <%= @loan.term%>, уплатить помимо этого в качестве процентов <%=@percent%> рублей. В случае просрочки обязуюсь в качестве штрафа помимо основной суммы и процентов выплатить <%=@loan.punishment%> рублей.</p>
+<p align="center">Написано собственноручно.
+	<%=@loan.begining%></p>
